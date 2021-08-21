@@ -6,6 +6,28 @@
  * Copyright: 3rd Wave Media Ltd.
  * Website: https://themes.3rdwavemedia.com/
 */
+
+:root {
+  --primary: #3AAA64;
+  --secondary: #54ba4e;
+}
+
+.pm {
+  color: var(--primary) !important;
+}
+
+.sc {
+  color: var(--primary) !important;
+}
+
+.bg-pm {
+  background-color: var(--primary) !important;
+}
+
+.bg-pm {
+  background-color: var(--primary) !important;
+}
+
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
@@ -22,12 +44,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #3AAA64;
+  color: var(--primary);
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   text-decoration: none;
+}
+
+#darkSwitch::after{
+  background-color: var(--primary) !important;
+}
+
+#darkSwitch:checked{
+  background-color: var(--secondary) !important;
 }
 
 a:hover {
@@ -65,8 +95,8 @@ a:focus {
 }
 
 a.btn-cta-primary, .btn-cta-primary {
-  background: #54ba4e;
-  border: 1px solid #54ba4e;
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -98,7 +128,7 @@ a.btn-cta-secondary:hover, a.btn-cta-secondary:not(:disabled):not(.disabled):act
 }
 
 .badge-theme {
-  background: #3AAA64;
+  background: var(--primary);
   font-size: 12px;
   color: #fff;
   border-radius: 2px;
@@ -257,7 +287,7 @@ a.dotted-link:hover {
 }
 
 .latest .has-ribbon .text {
-  background: #3AAA64;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -649,8 +679,8 @@ a.dotted-link:hover {
 }
 
 .dark-mode-switch .form-check-input:checked {
-  background-color: #54ba4e;
-  border-color: #54ba4e;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }
 
 .dark-mode-switch .form-check-input:focus {
@@ -673,7 +703,7 @@ body[data-theme="dark"] a.btn:hover {
 }
 
 body[data-theme="dark"] .dark-mode-switch .form-check-input:focus {
-  border-color: #54ba4e;
+  border-color: var(--secondary);
 }
 
 body[data-theme="dark"] .header {
@@ -755,11 +785,11 @@ body[data-theme="dark"] .aside .subheading {
 body[data-theme="dark"] .gha-header, body[data-theme="dark"] .gha-footer, body[data-theme="dark"] .gha-feed {
   background: #17191c;
   border-color: rgba(255, 255, 255, 0.1);
-  color: #3AAA64;
+  color: var(--primary);
 }
 
 body[data-theme="dark"] .gha-feed a {
-  color: #3AAA64;
+  color: var(--primary);
 }
 
 body[data-theme="dark"] .gha-header > .gha-github-icon,
